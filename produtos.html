@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Skincare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">Naturally Skincare Store</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <section class="produtos">
+       
+        <div class="card">
+            <img src="imagens/cleasingoil.png" alt="Cleansing Oil">
+            <h3>Cleansing Oil</h3>
+            <p>É um dermocosmético produzido para realizar uma limpeza profunda da pele,
+                 sem agredir e nem retirar a oleosidade natural.</p>
+                 <br>
+            <p>Preço: R$ 90,00</p> <br>
+            <button onclick="adicionarAoCarrinho('Produto 1', 29.90)">Adicionar ao Carrinho</button>
+        </div>
+ 
+        <div class="card">
+            <br><br> <br><img src="imagens/tonicofacial.png" alt="Tônico Facial"> <br><br>
+            <h3>Tônico Facial</h3>
+            <p>Regula o PH da pele auxiliando na tonificação, hidratação e
+                desobstrução dos poros, deixando uma pele mais refrescante e limpa.</p> <br>
+            <p>Preço: R$ 96,00</p> <br>
+            <button onclick="adicionarAoCarrinho('Produto 2', 39.90)">Adicionar ao Carrinho</button>
+        </div>
+ 
+        <div class="card">
+           <br><br><br> <img src="imagens/CremeHidratanteFacial.png" alt="Creme Hidratante Facial">
+           <br><br> <h3>Creme Hidratante Facial</h3>
+            <p>Ajuda a preservar a oleosidade natural da pele,
+                 e proporcionando uma hidratação profunda, agradável
+                  e natural.</p> <br>
+            <p>Preço: R$ 138,00</p> <br>
+            <button onclick="adicionarAoCarrinho('Produto 3', 49.90)">Adicionar ao Carrinho</button>
+        </div>
+ 
+        <div class="card">
+            <br><br><br><img src="imagens/SérumBooster.png" alt="Sérum Booster">
+           <br> <h3>Sérum Booster</h3>
+            <p>age na uniformização da pele,
+                deixando também manchas menos visíveis e a pele bem hidratada.</p> <br>
+            <p>Preço: R$ 129,60</p> <br>
+            <button onclick="adicionarAoCarrinho('Produto 4', 59.90)">Adicionar ao Carrinho</button>
+        </div>
+ 
+        <div class="card">
+           <img src="images/produto5.jpg" alt="Produto 5">
+            <h3>Produto 5</h3>
+            <p>Descrição do Produto 5.</p>
+            <p>Preço: R$ 69,90</p><
+            <button onclick="adicionarAoCarrinho('Produto 5', 69.90)">Adicionar ao Carrinho</button>
+        </div>
+       
+        <div class="card">
+            <img src="images/produto6.jpg" alt="Produto 6">
+            <h3>Produto 6</h3>
+            <p>Descrição do Produto 6.</p>
+            <p>Preço: R$ 79,90</p>
+            <button onclick="adicionarAoCarrinho('Produto 6', 79.90)">Adicionar ao Carrinho</button>
+        </div>
+ 
+        <div class="card">
+            <img src="images/produto7.jpg" alt="Produto 7">
+            <h3>Produto 7</h3>
+            <p>Descrição do Produto 7.</p>
+            <p>Preço: R$ 89,90</p>
+            <button onclick="adicionarAoCarrinho('Produto 7', 89.90)">Adicionar ao Carrinho</button>
+        </div>
+ 
+        <div class="card">
+            <img src="images/produto8.jpg" alt="Produto 8">
+            <h3>Produto 8</h3>
+            <p>Descrição do Produto 8.</p>
+            <p>Preço: R$ 99,90</p>
+            <button onclick="adicionarAoCarrinho('Produto 8', 99.90)">Adicionar ao Carrinho</button>
+        </div>
+ 
+        <div class="card">
+            <img src="images/produto9.jpg" alt="Produto 9">
+            <h3>Produto 9</h3>
+            <p>Descrição do Produto 9.</p>
+            <p>Preço: R$ 109,90</p>
+            <button onclick="adicionarAoCarrinho('Produto 9', 109.90)">Adicionar ao Carrinho</button>
+        </div>
+    </section>
+ 
+    <footer>
+        <p>&copy; 2024 Naturally Skincare Store</p>
+        <p>Email: naturallyskincarestore@gmail.com</p>
+        <div class="redes-sociais">
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+ 
+    <script>
+        let carrinho = [];
+ 
+        function adicionarAoCarrinho(nome, preco) {
+            const produto = {
+                nome: nome,
+                preco: preco,
+                quantidade: 1
+            };
+ 
+            const index = carrinho.findIndex(item => item.nome === nome);
+            if (index > -1) {
+                carrinho[index].quantidade++;
+            } else {
+                carrinho.push(produto);
+            }
+ 
+            alert(`${nome} foi adicionado ao carrinho!`);
+            console.log(carrinho);
+        }
+    </script>
+</body>
+</html>
+ 
+ 
